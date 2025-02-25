@@ -1,0 +1,37 @@
+server:
+  port: 8081
+spring:
+  profiles:
+    active: test
+  datasource:
+    url: jdbc:postgresql://dpg-cuuvq4dds78s7387qa6g-a.oregon-postgres.render.com:5432/aws_postgres_bd_pu6c
+    username: aws_postgres_bd_pu6c_user
+    password: ZSkHJr002ddgo7FvHoohjPHYgjx5AocZ
+    driver-class-name: org.postgresql.Driver
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+        use_sql_comments: true
+        type: trace
+
+springdoc:
+  api-docs:
+    enabled: true
+  swagger-ui:
+    enabled: true
+
+logging:
+  level:
+    org:
+      hibernate:
+        type: trace
+
+
+
