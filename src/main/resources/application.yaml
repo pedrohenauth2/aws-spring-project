@@ -13,17 +13,14 @@ spring:
     ## password: DATA_SOURCE_PASSWORD: ZSkHJr002ddgo7FvHoohjPHYgjx5AocZ
     driver-class-name: org.postgresql.Driver
   jpa:
-    database-platform: org.hibernate.dialect.PostgreSQLDialect
     show-sql: false
+    open-in-view: false
     properties:
       hibernate:
         format_sql: false
         use_sql_comments: false
         jdbc:
           batch_size: 50
-  h2:
-    console:
-      enabled: false
 
 springdoc:
   api-docs:
