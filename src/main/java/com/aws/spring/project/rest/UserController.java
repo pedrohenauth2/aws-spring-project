@@ -30,7 +30,7 @@ public class UserController {
             content = @Content(mediaType = "application/json",
                     schema = @Schema(implementation = UserRepresentation.class)))
     @ApiResponse(responseCode = "500", description = "Erro interno do servidor")
-    public ResponseEntity<List<UserRepresentation>> findUser(@RequestParam Long id) {
+    public ResponseEntity<List<UserRepresentation>> findUser(@RequestParam(required = false) Long id) {
        return ResponseEntity.ok(userMapper.toRepresenation(userService.findUsers(id)));
     }
 

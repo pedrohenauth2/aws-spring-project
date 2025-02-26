@@ -15,7 +15,7 @@ public class UserService {
     private UserRepository repository;
 
     public List<User> findUsers(Long id) {
-        return repository.findById(id).stream().toList();
+        return id == null ? repository.findAll() : repository.findById(id).stream().toList();
     }
 
     @Transactional
