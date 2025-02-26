@@ -5,9 +5,12 @@ spring:
   profiles:
     active: prod
   datasource:
-    url: jdbc:postgresql://dpg-cuuvq4dds78s7387qa6g-a.oregon-postgres.render.com:5432/aws_postgres_bd_pu6c
-    username: aws_postgres_bd_pu6c_user
-    password: ZSkHJr002ddgo7FvHoohjPHYgjx5AocZ
+    url: ${DATA_SOURCE_URL}
+    username: ${DATA_SOURCE_USERNAME}
+    password: ${DATA_SOURCE_PASSWORD}
+    ## url: DATA_SOURCE_URL: jdbc:postgresql://dpg-cuuvq4dds78s7387qa6g-a.oregon-postgres.render.com:5432/aws_postgres_bd_pu6c
+    ## username: DATA_SOURCE_USERNAME: aws_postgres_bd_pu6c_user
+    ## password: DATA_SOURCE_PASSWORD: ZSkHJr002ddgo7FvHoohjPHYgjx5AocZ
     driver-class-name: org.postgresql.Driver
   jpa:
     database-platform: org.hibernate.dialect.PostgreSQLDialect
